@@ -57,7 +57,7 @@
   }ms cubic-bezier(.83,.35,.7,.89);}`;
 
   ReviewAns.addEventListener("click", () => {
-    window.open("Answers.html", "_top");
+    window.open("answers.html", "_top");
     sessionStorage.setItem("Answers", JSON.stringify(answersArr));
   });
 })();
