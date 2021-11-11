@@ -1,0 +1,193 @@
+body {
+  background-color: #1ab4b6;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0 10px;
+}
+[class^="container"] {
+  background-color: #109799;
+  box-shadow: 2px 10px 5px 5px #333;
+  color: #f4fbfb;
+  padding: 20px;
+}
+[class^="container"]:not(:last-child) {
+  margin-bottom: 20px;
+}
+[class^="qs"] {
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 767px) {
+  [class^="qs"] {
+    font-size: 20px;
+  }
+}
+@media (max-width: 420px) {
+  [class^="qs"] {
+    font-size: 15px;
+  }
+}
+[class^="answersDiv"] {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+}
+[class*="Answer"] {
+  display: flex;
+  align-content: center;
+  text-indent: 7px;
+  font-size: 25px;
+  margin: 5px;
+  background-color: #fbf5f4;
+  color: #9d1206;
+  border: 2px solid black;
+  width: 50vw;
+}
+@media (max-width: 767px) {
+  [class*="Answer"] {
+    width: 70vw;
+    font-size: 18px;
+  }
+}
+@media (max-width: 420px) {
+  [class*="Answer"] {
+    width: 100%;
+    font-size: 13px;
+  }
+}
+.popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(93, 90, 90, 0.513);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -moz-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  -o-transform: translate(-50%, -50%) scale(0);
+  transition: 05s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.popup .popupCenter {
+  position: absolute;
+  background-color: #eee9e9;
+  box-shadow: 10px 10px 5px 0 #b9abb8;
+  color: rgb(68, 68, 68);
+  height: 50%;
+  width: 70%;
+  padding: 20px;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.popup .popupCenter .popupAlert {
+  color: #ff2828;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+.popup .popupCenter .popupMsg {
+  margin: 0;
+  margin-top: 5%;
+  font-size: 40px;
+}
+span.green {
+  color: #22ed22;
+}
+span.red {
+  color: #ff2828;
+}
+.popup .closepopup {
+  background-color: #eee9e9;
+  color: rgb(68, 68, 68);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+.openpopup {
+  background-color: #eee9e9;
+  color: rgb(68, 68, 68);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  cursor: pointer;
+}
+.active {
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+.openpopup.active {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #eee9e9;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #9d1206;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+span.copy {
+  position: fixed;
+  right: 5px;
+  bottom: 0px;
+  color: #222;
+  background-color: gold;
+  border-radius: 5px;
+}

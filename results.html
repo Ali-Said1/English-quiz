@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ali Said" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0 10px;
+        background-color: #7b8bb6;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5%;
+      }
+      .degree {
+        text-align: center;
+        width: 100vw;
+        color: #f7f9fd;
+        font-size: 30px;
+        margin-bottom: 3%;
+      }
+      .progress {
+        width: 50vw;
+        position: relative;
+        background-color: #f4f6fb;
+        height: 30px;
+        border: 5px solid #d2deff;
+        border-radius: 25px;
+        transition: 0.5s cubic-bezier(0.13, -0.61, 0.85, 1.39);
+      }
+      .progress::before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        border-radius: 25px;
+        width: 0;
+        background-color: #619da8;
+      }
+      @media (max-width: 767px) {
+        .progress {
+          width: 70vw;
+        }
+      }
+      @media (max-width: 420px) {
+        .progress {
+          width: 100vw;
+        }
+      }
+      button {
+        outline: none;
+        border: none;
+        background-color: rgb(63, 109, 109);
+        color: rgb(238, 255, 0);
+        font-size: 17px;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+        width: 120px;
+        height: 65px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+      button[disabled] {
+        background-color: rgb(100, 100, 100);
+        color: rgb(255, 255, 255);
+        opacity: 50%;
+      }
+      span.copy {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        color: #222;
+        background-color: gold;
+        border-radius: 5px;
+      }
+    </style>
+    <title>Results</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="degree">
+        <span>degree: </span><span class="degreeSpan">0</span>%
+      </div>
+      <div class="progress"></div>
+    </div>
+    <button class="review" disabled>Review answers</button>
+    <span class="copy">&copy; Ali Said</span>
+    <script src="js/results.js"></script>
+  </body>
+</html>
