@@ -9,7 +9,14 @@
     const close_popup = document.querySelector(".closepopup");
 
     const open_popup = document.querySelector(".openpopup");
-    console.log(qsArray);
+
+    const retakeBtn = document.getElementById("retake");
+
+    retakeBtn.addEventListener("click", () => {
+      window.open("index.html");
+      window.close();
+    });
+
     for (i = 0; i < 20; i++) {
       let qn = i + 1;
       let containerClass = "container" + i;
